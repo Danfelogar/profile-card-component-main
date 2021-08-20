@@ -1,0 +1,87 @@
+:root {
+    --Darkcyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --Darkgrayishblue: hsl(227, 10%, 46%);
+    --Darkgray: hsl(0, 0%, 59%);
+}
+* {
+    box-sizing: border-box;/*mantenga su tamaño con respecto al borde*/
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    Font-size: 18px;
+    background-color: var(--Darkcyan);
+    background-image: url('./images/bg-pattern-top.svg'),  url('./images/bg-pattern-bottom.svg'); /*para agregar imagenes extra de fondos*/
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 51vw bottom 20vh, left 45vw top 50vh;
+}
+.card_container {
+    position: relative;
+    margin: 18rem auto 5.5rem;
+    width: 32.8rem;
+    height: 38rem;
+    border-radius: 1rem;
+    overflow: hidden; /*todo lo que este fuera del cuadrado o area programada se esconde*/   
+}
+.background_card {
+    background:  url('./images/bg-pattern-card.svg');
+    height:14rem;
+}
+.image {
+    position: absolute;
+    top: 8.7rem;
+    left: 35%;
+    border: 0.5rem solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 9.6rem;
+    height: 9.6rem;
+}
+.data {
+    background-color: white;
+    height: 15rem;
+    padding: 7.5rem;
+    text-align: center;
+}
+.name {
+    font-size: 700;
+    color: var(--Verydarkdesaturatedblue)
+}
+.age, .city {
+    color:var(--Darkgray)
+}
+.city {
+    margin-top:1rem;
+    font-size: 1.44rem;
+}
+.stats_container {
+    background-color: white;
+    border-top: 0.1rem solid #bfbfc1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9rem;
+}
+.stats {
+    text-align: center;
+}
+.number {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--Verydarkdesaturatedblue);
+}
+.characteristic {
+    font-size:1.08rem;
+    color: var(--Darkgray);
+    letter-spacing: 0.2rem;/*espaciado entre letras*/
+}
+@media (min-width: 1440px) {
+    .card_container{
+        width:35rem;
+    }
+}
